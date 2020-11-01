@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 如果没有定义形参 同时还要拿到传递过来的实参  使用arguments arguments它就是一个伪数组
+      //   function getMax() {
+      //     // 先假设数组里面的第一个元素最大
+      //     var index = arguments[0];
+      //     // 拿假设的这个数组元素与其它的元素进行比较
+      //     for (var i = 1; i < arguments.length; i++) {
+      //       if (index < arguments[i]) {
+      //         index = arguments[i];
+      //       }
+      //     }
+      //     return index;
+      //   }
+
+      //   var res = getMax(10, 20, 30, 40);
+
+      //   console.log(res);
+
+      var obj = {
+        getMax: function () {
+          // 先假设数组里面的第一个元素最大
+          var index = arguments[0];
+          // 拿假设的这个数组元素与其它的元素进行比较
+          for (var i = 1; i < arguments.length; i++) {
+            if (index < arguments[i]) {
+              index = arguments[i];
+            }
+          }
+          return index;
+        }
+      };
+
+      // 对象.属性名()
+      var res = obj.getMax(10, 20, 30, 40, 50);
+      console.log(res);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 第一步：创建时间日期对象
+      var myDate = new Date();
+      // 第二步：通过时间日期对象获取今天星期几
+      var week = myDate.getDay()
+      // 拿 week的值 与 case 后面的值进行比较  如果全等 就会执行对应的代码块 
+      // 执行完了以后 它还要看看有没有break关键字 如果有 switch就结束了 如果没有 它就会执行下一个代码块 
+      switch (week) {
+        case 1:
+          console.log("打篮球");
+          break;
+        case 2:
+          console.log("打台球");
+          break;
+        case 3:
+          console.log("打乒乓球");
+          break;
+        case 4:
+          console.log("打网球");
+          break;
+        case 5:
+          console.log("打高尔夫");
+          break;
+        default:
+          console.log("写代码");
+      }
+    </script>
+  </body>
+</html>

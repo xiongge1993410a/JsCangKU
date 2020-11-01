@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 键盘码 事件对象里面
+        document.addEventListener('keypress',function(e) {
+            var e = e || window.event;
+            var code = e.keyCode
+            console.log(code);
+        })
+    </script>
+</body>
+</html>

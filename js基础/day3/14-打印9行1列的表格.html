@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 600px;
+        border: 1px solid #000;
+        /* 合并表格的边框线 */
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 为了完成9行1列的表格 需要对 行进行循环 循环9次  str += '<tr><td>&nbsp;</td></tr>'; 当作为循环的循环体
+      var str = "<table>";
+      for (var i = 1; i <= 9; i++) {
+        str += "<tr><td>&nbsp;</td></tr>";
+      }
+      str += "</table>";
+      document.write(str);
+    </script>
+  </body>
+</html>

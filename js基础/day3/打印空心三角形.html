@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+aaaa*
+aaa***
+aa*****          
+a*******
+*********
+
+每一行的第一个星星与最后一个星星打印 其它的位置都使用空格来代码
+
+每一行的第一个列 用 j = 1来表示   
+每一行的最后一个列   j = 2*i -1 
+
+
+       */
+      document.write("<pre>");
+      for (var i = 1; i <= 20; i++) {
+        // 先打印字母a
+        for (var x = 20 - i; x >= 1; x--) {
+          document.write(" ");
+        }
+
+        // 打印星星
+        for (var j = 1; j <= 2 * i - 1; j++) {
+          if(j === 1 || j === 2*i - 1 || i === 20) {
+              document.write('*')
+          }else {
+              document.write(' ')
+          }
+        }
+
+        document.write("<br>");
+      }
+
+      // 输入100~1
+    </script>
+  </body>
+</html>

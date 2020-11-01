@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        position: absolute;
+        border: 1px solid #000;
+      }
+      /* body {
+            background-color: #222;
+        } */
+    </style>
+  </head>
+  <body>
+    <script>
+      // 1.给document注册点击事件
+      document.addEventListener("click", function (e) {
+        // 解决兼容性的问题
+        var e = e || window.event;
+        var x = e.clientX; // 鼠标点击的坐标值
+        var y = e.clientY; // 鼠标点击的坐标值
+        // 2. 我们创建一个img标签对象
+        var imgNode = document.createElement("img");
+        imgNode.src = "./images/xingxing.jpg";
+        var width = getRandom(100,20)
+        imgNode.width = width
+        imgNode.style.left = (x - width /2) + "px";
+        imgNode.style.top = (y - width/2)  + "px";
+        // 将创建的这个元素追加到body标签里面去
+        document.body.appendChild(imgNode);
+      });
+
+      function getRandom(max, min) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+    </script>
+  </body>
+</html>

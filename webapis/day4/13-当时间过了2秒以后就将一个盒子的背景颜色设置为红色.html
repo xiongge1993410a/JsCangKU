@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      /*
+            window.setTimeout(要使用的代码或者是一个函数也行,毫秒时间)
+            当这个时间到了 就会执行代码或者是函数 但是注意这个代码或者函数只会执行一次
+        
+        */
+      var div = document.querySelector("div");
+      //    window.setTimeout('console.log("OK")',5000);
+      window.setTimeout(function () {
+        div.style.backgroundColor = "#f00";
+      }, 2000);
+    </script>
+  </body>
+</html>

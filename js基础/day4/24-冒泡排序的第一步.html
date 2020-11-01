@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [10, 3, 7, 24, 6, 81, 5];
+      for (var i = 0; i < arr.length - 1; i++) {
+        // 需要遍历数组  只要前一个比后一个要大 就交换它们两个的位置
+        // 第一轮我们已经排好一个最大的数字在最右边 少循环0次 i = 0
+        // 第二轮我们就应该少循环一次  i = 1
+        // 第三轮我们应该少循环2次    i = 2
+        for (var j = 0; j < arr.length - i - 1; j++) {
+          // 如何判断数组的前一个元素比后一个元素要大
+          if (arr[j] > arr[j + 1]) {
+            var temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        // var str = 'abcd'  // NaN
+        // var str = '1234'   1234
+        // var str = 'true'  NaN
+        // var str = false   0 
+        // var str = true    1
+        // var str = null    0
+        var str = undefined
+        // 它会将其它的类型强制转换为Number类型：Number类型里面包含数字和NaN 
+        // 如果其它的类型可以转换为数字 就会变成对应的数字 如果转换不成功为数字 它也是转换为了 Number类型 给一个值叫NaN (Not a Number)
+        var res = Number(str)
+
+        console.log(res)
+
+    </script>
+</body>
+</html>

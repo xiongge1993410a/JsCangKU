@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 打印1~100之间所有的偶数
+      // 1. 先要有 1~100之间所有的数
+      // 2. 从这些数中找出哪些数字是偶数 应该拿这些数字  % 2 === 0 如果余数为0就表示它是偶数
+      for (var i = 1; i <= 100; i++) {
+        // 需要判断哪些数字是偶数 单分支
+        if (i % 2 === 0) {
+          document.write(i + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

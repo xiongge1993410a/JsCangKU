@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        float: left;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+      var divs = document.getElementsByTagName("div");
+      // 鼠标点击谁就让谁设置背景颜色
+      for (var i = 0; i < divs.length; i++) {
+        // 给每一个div注册点击事件  函数是需要调用它它才会执行
+        divs[i].onclick = function () {
+          this.style.backgroundColor = 'pink'
+        };
+      }
+    </script>
+  </body>
+</html>

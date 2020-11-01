@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input type="text" name="username">
+        <input type="password"" name="pwd">
+        <input type="text" name="age">
+        <button>提交</button>
+    </form>
+    <script>
+        // 获取地址栏上面的查询字符串
+        var search = location.search;
+        // 第一步需要创建一个空的对象 
+        // '?name=admin&pwd=123456&age=18'
+        var obj = {}
+        var str = search.substr(1);
+        // 使用 &把字符串进行分隔为数组
+        var arr = str.split('&');
+        // 需要遍历数组 
+        for(var i = 0;i<arr.length;i++) {
+            // 使用等号将字符串进行分隔为数组 
+            var newArr = arr[i].split('=')
+            // 把newArr数组里面下标为0的元素作为 对象的属性名 把下标为1的元素作为对象的值
+            // 给对象添加属性  对象.属性名 = 值 或者 对象['属性名'] = 值
+            obj[newArr[0]] = newArr[1]
+        }
+        console.log(obj)
+    </script>
+</body>
+</html>

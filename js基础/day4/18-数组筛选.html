@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+      // 将这个数组中的元素大于等于10的找出来 放到一个新数组中
+      var newArr = [];
+      // 我们需要遍历arr数组
+      for (var i = 0; i < arr.length; i++) {
+        // 找出大于等于10的元素
+        if (arr[i] >= 10) {
+          // 将这个元素放入到新数组中
+          // 新数组.push(arr[i])
+          newArr.push(arr[i]);
+        }
+      }
+      console.log(newArr);
+    </script>
+  </body>
+</html>

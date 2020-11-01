@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>我是小李</div>
+    <button id="btn">获取</button>
+    <script src="js/public.js"></script>
+    <script>
+        //第一步：需要获取id=btn这个标签对象
+        var btn = $('#btn');
+        // 第二步：给btn对象添加点击事件 
+        btn.onclick = function() {
+            // 想要获取到div标签里面的内容
+            var div = $('div')
+            // 获取标签的内容
+            // console.log(div.innerText)
+            console.log(div.innerHTML)
+        }
+    </script>
+  </body>
+</html>

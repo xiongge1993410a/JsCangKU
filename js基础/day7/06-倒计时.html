@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 用未来的时间戳 - 现在的时间戳   如何将秒转换为 天
+      // 86400  1小时 60*60 = 3600 * 24 =
+      function countDown(inputTime) {
+        // 得到当前的时间的时间戳
+        var now = new Date();
+        var nowTime = now.getTime();
+        // 获取到未来的时间戳
+        var fDate = new Date(inputTime);
+        var fTime = fDate.getTime();
+        // 用未来的时间戳 减去 现在的时间戳
+        var time = (fTime - nowTime) / 1000; // 将毫秒转换为秒
+        var d = parseInt(time / 60 / 60 / 24).toString().padStart(2, '0');
+        var h = parseInt(time / 60 / 60 % 24).toString().padStart(2, '0');
+        var m = parseInt(time / 60 % 60).toString().padStart(2, '0');
+        var s = parseInt(time % 60).toString().padStart(2, '0');
+
+        return `还剩下${d}天 ${h}小时 ${m}分钟 ${s}秒`
+        
+      }
+
+      var str = countDown("2020-10-1");
+      document.write(str)
+    </script>
+  </body>
+</html>

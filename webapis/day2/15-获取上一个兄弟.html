@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>第1个li</li>
+      <li>第2个li</li>
+      <li>第3个li</li>
+      <li>第4个li</li>
+    </ul>
+    <script>
+      var ul = document.querySelector("ul");
+      var li = ul.children[2];
+      var nextLi = getNextElementSibling(li);
+
+      function getNextElementSibling(element) {
+        var el = element;
+        while ((el = el.nextSibling)) {
+          if (el.nodeType === 1) {
+            return el;
+          }
+        }
+        return null;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 要求将下面的这个字符串 my_student_class 把它变成 myStudentClass
+      // 将小写的英文字母变成大写的英文字母   小写字母.toUpperCase()  大写字母.toLowerCase()
+      // 1.先使用_将字符串分割为数组 ['my','student','class']
+      // 2.遍历数组 从下标为1的地方开始遍历
+      // 3.将数组的首字母取出来变成大写的
+      var str = "my_student_class";
+      var arr = str.split("_");
+      // 2.遍历数组 从下标为1的地方开始遍历
+      for (var i = 1; i < arr.length; i++) {
+        // 获取字符串的第一个字符
+        var c = arr[i];
+        // 将这个字符串的首字线变成大写字母
+        var firstChar = c[0].toUpperCase();
+        var lastChar = c.substr(1);
+        arr[i] = firstChar + lastChar;
+      }
+      //   console.log(arr.join(''));
+      var res = arr.join("");
+      console.log(res);
+    </script>
+  </body>
+</html>

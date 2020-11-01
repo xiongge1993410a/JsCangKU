@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <script src="js/public.js"></script>
+    <script>
+        // 第一步获取 id=btn这个标签对象
+        var btn = $('#btn')
+        // 第二步：给btn对象添加点击事件  onclick ondblclick 等等  对象.事件属性 = 事件的处理程序 事件的处理程序就是一个匿名函数 
+        btn.onclick = function() {
+            alert('打醒你')
+        }
+    </script>
+</body>
+</html>

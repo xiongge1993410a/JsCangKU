@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <button>显示与隐藏</button>
+    <hr />
+    <div id="box"></div>
+    <script>
+      // 鼠标点击按钮时 要判断div盒子 是显示还是隐藏 如果盒子是显示的 就将这个盒子隐藏起来 如果这个盒子是隐藏的就显示出来
+      // 1.获取元素
+      var btn = document.querySelector("button");
+      var div = document.querySelector("#box");
+
+      // 假设这个盒子是显示的
+      var flag = true;
+      // 先给按钮注册点击事件
+      btn.onclick = function () {
+        // 如果flag的值 为true 就应该将div盒子隐藏 同时将flag的值设置为false
+        // 如果flag的值 为false 就应该将div盒子显示 同时将flag的值设置为true
+        if (flag) {
+          div.style.display = "none";
+          flag = false;
+        } else {
+          div.style.display = "block";
+          flag = true;
+        }
+      };
+    </script>
+  </body>
+</html>

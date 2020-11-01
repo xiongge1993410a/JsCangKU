@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        name: "张三",
+        age: 18,
+        sex: "男"
+      };
+
+      /*
+          js内部给我们提供了一个用于遍历对象或者遍历数组的语法  
+          获取属性的值 不能用 对象.属性名  只能使用 对象[变量名]
+          for(声明变量 in 对象) {
+
+          }
+          我们在使用 for...in 语句遍历对象时 这里的变量它是代表了对象的属性而已  
+        */
+
+      for (var key in obj) {
+        // console.log(key)
+        console.log(obj[key]);
+      }
+    </script>
+  </body>
+</html>

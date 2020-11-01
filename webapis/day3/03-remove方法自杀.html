@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>第1个li</li>
+      <li>第2个li</li>
+      <li>第3个li</li>
+      <li>第4个li</li>
+    </ul>
+    <script>
+      var ul = document.querySelector("ul");
+      var lis = ul.children; // 返回一个伪数组
+
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].onclick = function () {
+          // 想自杀
+          this.remove();
+        };
+      }
+    </script>
+  </body>
+</html>

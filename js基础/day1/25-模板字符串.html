@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 因为我们之前使用单引号或者双引号声明变量时 字符串里面如果出现了变量 这个变量是不会被解析 
+        // ES6 给我们新的语法 
+        var uname = '张三';
+        var age = 18;
+
+        var str = `他今年${age}岁了，他的名字叫${uname}`;
+        console.log(str)
+    </script>
+</body>
+</html>

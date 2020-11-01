@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <p id="p"></p>
+    <script>
+      // 1.需要先获取 div这个标签 我们就给某个div元素添加一个id属性
+      /*
+            document.getElementById('id属性的值')
+            通过ID属性的值来获取元素
+        */
+      var div = document.getElementById("box");
+      div.style.backgroundColor = "#f00";
+
+      var p = document.getElementById("p");
+      p.style.borderRadius = "50%";
+      p.style.backgroundColor = 'pink'
+    </script>
+  </body>
+</html>

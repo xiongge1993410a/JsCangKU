@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li onclick="alert('ok')">第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+    </ul>
+    <button id="btn">克隆</button>
+    <script>
+        var btnObj = document.getElementById("btn");
+        var ulObj = document.getElementById("ul");
+        //将第一个子元素克隆一份
+        var firstObj = ulObj.children[0].cloneNode();
+        // firstObj.innerHTML = "我是克隆滴";
+        btnObj.onclick = function(){
+            ulObj.appendChild(firstObj);
+        }
+    </script>
+</body>
+</html>

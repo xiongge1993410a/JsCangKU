@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>第1个li</li>
+      <li>第2个li</li>
+      <li>第3个li</li>
+      <li>第4个li</li>
+    </ul>
+    <button id="btn">新增</button>
+    <script>
+      var ul = document.querySelector("ul");
+      var btn = document.querySelector("#btn");
+      var lis = ul.children;
+
+      btn.onclick = function () {
+        var li = document.createElement("li");
+        li.innerHTML = "新增加的元素";
+        // 将新创建的li追加到ul里面去
+        ul.appendChild(li)
+      };
+
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].onclick = function () {
+          // 鼠标被点击的这个用 this来表示
+          // 父对象.removeChild(要删除的元素)
+          ul.removeChild(this);
+        };
+      }
+    </script>
+  </body>
+</html>

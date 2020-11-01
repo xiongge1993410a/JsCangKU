@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: url(images/1.jpg) no-repeat center top;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .baidu {
+        overflow: hidden;
+        margin: 100px auto;
+        background-color: #fff;
+        width: 410px;
+        padding-top: 3px;
+      }
+
+      .baidu li {
+        float: left;
+        margin: 0 1px;
+        cursor: pointer;
+      }
+
+      .baidu img {
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul class="baidu">
+      <li><img src="images/1.jpg" /></li>
+      <li><img src="images/2.jpg" /></li>
+      <li><img src="images/3.jpg" /></li>
+      <li><img src="images/4.jpg" /></li>
+    </ul>
+    <script>
+      // 1. 获取所有的img标签
+      var imgs = document.querySelectorAll("img");
+      // 2.分别给每一个img标签注册click事件
+      for (var i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = function () {
+          // 获取到当前被点击的这个元素的src属性的值 然后将其赋值给body标签的style.backgroundImage
+          var imgSrc = this.src;
+          document.body.style.background = `url(${imgSrc})`;
+        };
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 其实我们定义的变量 它相对于给window对象添加了一个叫v1的属性  只不过window对象可以省略不写
+      // 我们定义的函数 其实就是给window对象添加方法
+      var v1 = 10;
+      for (var key in window) {
+        console.log(key);
+      }
+    </script>
+  </body>
+</html>

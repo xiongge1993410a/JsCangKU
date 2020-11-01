@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+      // 得到时间日期对象
+      var myDate = new Date();
+      var week = myDate.getDay(); // getDay() 返回值是0~6之间一个整数 0表示星期天 6表示星期六
+      console.log(arr[week]);
+    </script>
+  </body>
+</html>

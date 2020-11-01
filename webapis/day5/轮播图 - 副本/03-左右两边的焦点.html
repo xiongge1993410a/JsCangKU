@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: 0;
+        }
+
+        .all {
+            width: 500px;
+            height: 200px;
+            padding: 7px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .screen {
+            width: 500px;
+            height: 200px;
+            /* overflow: hidden; */
+            position: relative;
+        }
+
+        .screen li {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 3000px;
+        }
+
+        .all ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .all ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .all ol li.current {
+            background: yellow;
+        }
+
+        #arr {
+            display: none;
+            z-index: 1000;
+
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all" id='box'>
+        <div class="screen" id="screen">
+            <ul id="ul">
+                <li><img src="images/wf1.jpg" width="500" height="200" /></li>
+                <li><img src="images/wf2.jpg" width="500" height="200" /></li>
+                <li><img src="images/wf3.jpg" width="500" height="200" /></li>
+                <li><img src="images/wf4.jpg" width="500" height="200" /></li>
+                <li><img src="images/wf5.jpg" width="500" height="200" /></li>
+            </ul>
+            <ol id="ol">
+            </ol>
+        </div>
+        <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+    </div>
+    <script>
+        function animate(obj, target) {
+            //把timerId当作为obj对象的属性 
+            clearInterval(obj.timerId);
+            //需要一个定时器
+            obj.timerId = setInterval(function () {
+                //用于获取元素的当前位置 
+                var current = obj.offsetLeft;
+                var step = 10;
+                //如果目标位置 大于当前位置时 应该是从左往在 如果目标位置小于当前位置 从右到左
+                step = target > current ? step : -step;
+
+                //如果目标位置减去当前位置的绝对值 大于 步长值 的绝对值  
+                if (Math.abs(target - current) > Math.abs(step)) {
+
+                    current += step;
+                    obj.style.left = current + "px";
+                } else {
+                    clearInterval(obj.timerId);
+                    obj.style.left = target + "px";
+                }
+            }, 15);
+        }
+
+        function my$(id) {
+            return document.getElementById(id);
+        }
+
+    </script>
+    <script>
+        var boxObj = my$("box");
+        var screenObj = my$("screen");
+        var screenWidth = screenObj.offsetWidth;
+        var ulObj = my$("ul");
+        var lisObj = ulObj.children;
+        var olObj = my$("ol");
+        var arrObj = my$("arr");
+        var leftObj = my$("left");
+        var rightObj = my$("right");
+
+        //先生成ol下面的li 它的个数是由lisObj来决定的
+        for (var i = 0; i < lisObj.length; i++) {
+            //创建li标签对象
+            var liObj = document.createElement("li");
+            liObj.innerHTML = i + 1;
+            olObj.appendChild(liObj);
+            //判断如果i的时候 应该给它加一个class属性值为 current
+            if (i == 0) {
+                liObj.setAttribute("class", "current");
+            }
+        }
+
+        var olNextLisObj = olObj.children;
+
+        for (var i = 0; i < olNextLisObj.length; i++) {
+            //先给先一个li标签添加自定义的属性 index 
+            olNextLisObj[i].setAttribute("index", i);
+            //给每一个li注册 onclick事件  
+            olNextLisObj[i].onclick = function () {
+                //先清除所有的li身上的高亮显示
+                for (var j = 0; j < olNextLisObj.length; j++) {
+                    olNextLisObj[j].removeAttribute("class");
+                }
+
+                //当鼠标点击li时要获取到当前被点击这个li的Index属性值 
+                var index = this.getAttribute("index");
+                //调用animate函数 
+                animate(ulObj, -index * screenWidth);
+                //将当前元素进行高亮显示
+                this.setAttribute("class", "current");
+            }
+        }
+
+
+        //当鼠标放在box身上时 应该显示arr
+        boxObj.onmouseenter = function () {
+            arrObj.style.display = "block";
+        }
+
+        //当鼠标放在box身上时 应该显示arr
+        boxObj.onmouseleave = function () {
+            arrObj.style.display = "none";
+        }
+
+        //将第一个li克隆一份然后把它追加到ulObj这个对象 
+        ulObj.appendChild(lisObj[0].cloneNode(true));
+
+
+
+        //给左右两个焦点注册 Onclick事件 
+        var count = 0;
+        rightObj.onclick = function () {
+           //为了实现无缝滚动 当count这个变量的值 等于 lisObj.length-1时 应该让回到第一个li
+           if(count == lisObj.length - 1){
+               ulObj.style.left = 0+"px"; 
+               count = 0;
+           }
+           count++;
+
+            animate(ulObj, -count * screenWidth);
+
+        }
+
+        leftObj.onclick = function () {
+            //如果count  == 0时 应该显示最后一个li 
+            if(count == 0){
+                ulObj.style.left = -((lisObj.length - 1)*screenWidth)+"px";
+                count = lisObj.length - 1;
+            }
+            count--;
+
+            animate(ulObj, -count * screenWidth);
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

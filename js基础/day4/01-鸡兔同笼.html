@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // *今有雉兔同笼，上有三十五头，下有九十四足，问雉兔各几何？*
+      // 假设 变量i 表示鸡  23 12 
+      for (var i = 1; i <= 35; i++) {
+        var j = 35 - i;
+        // 判断腿的数量是否等于94
+        if (i * 2 + j * 4 === 94) {
+          document.write(`鸡的数量是: ${i} <br> 兔子的数量是: ${j}`);
+          break
+        }
+      }
+    </script>
+  </body>
+</html>

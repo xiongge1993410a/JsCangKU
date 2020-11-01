@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="father">
+      <button>按钮</button>
+    </div>
+    <script>
+      // 对象.parentNode
+      var btn = document.querySelector("button");
+      btn.onclick = function () {
+        console.log(this.parentNode);
+      };
+    </script>
+  </body>
+</html>

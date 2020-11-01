@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 现在讲对象 主要的目的是为了使用JS中的内置对象
+      // JS在创建的时候 它的内部已经有了一部分对象  重点
+      // 使用JS是自定义对象
+      function Hero(name, type, blood) {
+        this.name = name;
+        this.type = type;
+        this.blood = blood;
+        this.attack = function (attack) {
+          console.log(`${this.name}英雄是属于${attack}类型的英雄`);
+        };
+      }
+
+      var mc = new Hero("马超", "战士", "200血量");
+      mc.attack("近战");
+
+      var hz = new Hero("黄忠", "射手", "100血量");
+      hz.attack("远程");
+    </script>
+  </body>
+</html>

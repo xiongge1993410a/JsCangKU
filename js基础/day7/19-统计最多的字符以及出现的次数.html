@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = "oabcoefoxyozzopp";
+
+      // 对象的属性是不会重复出来的 必须是唯一 把字符串的每一个字符取出来，看看对象里面有没有该属性 如果没有 就给这个对象添加属性 并且属性的值设置为 1  如果有该属性了 就在其原来的属性值的基础上加1
+      // 1.新建一个空的对象
+      var obj = {};
+      // 2. 遍历字符串 依次的将字符串的每一个字符取出来
+      for (var i = 0; i < str.length; i++) {
+        // 看看这个字符在对象里面是否有该属性
+        var c = str[i];
+        if (obj.hasOwnProperty(c)) {
+          // 就在其原来的属性值的基础上加1
+          obj[c]++;
+        } else {
+          // 如果没有 就给这个对象添加属性 并且属性的值设置为 1
+          obj[c] = 1;
+        }
+      }
+
+      // 如何遍历对象   for(var key in 对象名)
+      var max = 0;
+      var str; // 为了得到最多的那个字符是什么
+      for (var key in obj) {
+        if (obj[key] > max) {
+          max = obj[key];
+          str = key;
+        }
+      }
+      console.log(max, str);
+    </script>
+  </body>
+</html>

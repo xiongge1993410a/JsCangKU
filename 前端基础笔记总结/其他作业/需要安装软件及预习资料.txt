@@ -1,0 +1,91 @@
+
+
+# VSCode（必装）
+
+一定要安装，编辑器。
+
+下载完之后是英文， 
+
+下载并安装Chinese插件，然后重启。
+
+下载并安装open in browser, 然后重启
+
+### vscode常用插件 （标重要的必装）
+
+1. Chinese		（重要）
+2. open in browser	（重要）
+3. Auto Close Tag
+4. HTML CSS Support
+5. HTML Snippets
+6. Path Intellisense
+7. vscode-icons
+
+
+
+# 谷歌浏览器（必装）
+
+
+
+# typora-setup-x64（必装）
+
+查看及制作md文档使用。
+
+
+
+# x-mind（必装）
+
+查看及制作思维导图使用
+
+
+
+## Snipaste-1.16.2-x64
+
+钉图软件， 使用方法：按f1获取选区，按f3钉图。
+
+
+
+
+
+## 测量软件
+
+如果没有ps可以安装Mark man ，适合我们现在使用。
+
+课程中后期用到，主要测量大小和标注。
+
+
+
+## Cutterman_panel_3.5.0_201711141423
+
+ps的切图插件。需要完整版ps才可以安装。
+
+
+
+
+
+# 需要安装的软件及预习资料
+
+这个是我们基础班需要安装的软件：
+
+链接：https://pan.baidu.com/s/1NEMGBIg6H8Gcm2HvUss_eA 
+提取码：5p4o
+
+
+
+第一个地址是b站上pink老师的视频, 可以在线观看, 不用下载, 第二个是带视频的预习资料，这两个地址的视频都是同样的, 可以自己选择
+https://www.bilibili.com/video/av80149248  
+链接地址： https://pan.baidu.com/s/1fOChukgeSvmlcwBiPw9S4Q
+提取码： lama 
+
+
+
+这个是无视频的链接，如果网速较慢可以下载这个不带视频的
+
+链接地址：链接：https://pan.baidu.com/s/1FEybOizO6PJIUwSIqkoCkQ 
+提取码：i5u7
+
+基础班作业视频:
+基础班作业视频链接地址：https://pan.baidu.com/s/159IToc4x3xK45dttE2Y6LA
+提取码：eguv
+
+
+

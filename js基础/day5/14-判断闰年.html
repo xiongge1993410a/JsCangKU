@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isRunYear(year) {
+        // if ((year % 4 === 0 && year % 100 != 0) || year % 400 === 0) {
+        //   console.log(year + "是闰年");
+        // } else {
+        //   console.log(year + "是平年");
+        // }
+        // 先假设这个年份 不是闰年
+        var flag = false;
+        if ((year % 4 === 0 && year % 100 != 0) || year % 400 === 0) {
+          // 推倒我们的假设
+          flag = true;
+        }
+
+        return flag;
+      }
+
+      isRunYear(2009);
+    </script>
+  </body>
+</html>

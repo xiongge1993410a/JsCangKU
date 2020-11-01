@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 第一步：先创建时间日期对象
+      var myDate = new Date();
+      var y = myDate.getFullYear();
+      var m = (myDate.getMonth() + 1).toString().padStart(2, "0"); // 获取当前的月份 返回值是0~11  0（一月） 到 11（十二月）
+      var d = myDate.getDate().toString().padStart(2, "0"); // 返回日期 返回值 1~31之间的一个整数
+      var h = myDate.getHours().toString().padStart(2, "0"); // 返回小时  返回值 0~23之间的一个数字
+      var f = myDate.getMinutes().toString().padStart(2, "0");
+      var s = myDate.getSeconds().toString().padStart(2, "0");
+
+      var str = `${y}-${m}-${d} ${h}:${f}:${s}`;
+      document.write(str);
+    </script>
+  </body>
+</html>

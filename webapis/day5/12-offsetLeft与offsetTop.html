@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            position: absolute;
+            left: 150px;
+            top: 150px;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        .son {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        var div = document.querySelector('.son');
+        console.log(div.offsetLeft);
+        console.log(div.offsetTop);
+    </script>
+</body>
+</html>

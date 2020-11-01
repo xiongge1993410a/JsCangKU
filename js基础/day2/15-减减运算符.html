@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 如果只是自己进行运算 不管是前减减还是后减减 那么自己都会减1 
+        // var i = 10;
+        // // i--
+        // --i
+        // console.log(i)
+        // 他们之间的区别在于 赋值的时候
+        // 前减减：先自己进行减1 然后再将结果赋值
+        // 后减减：先将自己赋值给别人，然后再自减1 
+        var i = 10;
+        // 1. j = i = 10  2. i = i - 1 = 10 - 1 = 9
+        // var j = i--;
+        // console.log(i, j)
+        // 前减减： 1.先将自己减去1 i = 10-1 = 9 
+        // 2.然后再将结果赋值给变量 j  j = i = 9
+        var j = --i;
+        console.log(i, j)
+
+    </script>
+</body>
+</html>

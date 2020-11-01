@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      比如：我们班上有小明和小王这两位同学去同一家公司上班，领导给小明同学提了一个需求：
+      要求在浏览器上面打印一个hello，
+      要求小王在控制台输出hello 
+
+领导写好的一个函数这个函数会有一个结果 
+      */
+      function printHello() {
+        return "hello";
+      }
+
+      // 小明调用领导已经封装好的函数 就可以拿到它的结果了
+      var res = printHello(); // 小明同学
+      alert(res);
+      var res1 = printHello(); // 小王同学
+      console.log(res1)
+    </script>
+  </body>
+</html>

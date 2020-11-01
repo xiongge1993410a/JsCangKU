@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- class属性是HTML里面本身所拥有的属性  程序员可以给标签自己添加属性 属性名任意-->
+    <div class="box" abcd="123" title="小猪"></div>
+    <script>
+      // 通过JS获取到HTML标签 最终得到的是一个JS对象  这个标签所拥有的属性 都会被转换为当前JS对象的属性
+      // 自己定义的属性不能通过 对象.属性名的方式获取到   getAttribute('属性名')
+      var div = document.querySelector(".box");
+      console.log(div.getAttribute("abcd"));
+    </script>
+  </body>
+</html>

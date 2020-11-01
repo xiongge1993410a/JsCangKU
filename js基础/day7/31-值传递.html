@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 将一个变量的值赋值给另外一个变量，如果修改了其中的某一个变量的值 ，那么另外一个变量的值不会跟着改变
+        // 值传递
+        function fn(a) {
+            a = a + 2;
+            console.log(a)
+        }
+
+        var b = 10
+        fn(b)
+
+        // 想看看变量b的值是多少
+        console.log(b)
+
+
+    </script>
+</body>
+</html>

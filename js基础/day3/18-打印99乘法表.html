@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 800px;
+        border: 1px solid #000;
+        /* 合并表格的边框线 */
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      td {
+        border: 1px solid #000;
+        text-align: center;
+      }
+      .style-red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      /*
+      第一行只有1个列
+      第二行只有2个列
+      第三行只有3个列
+      当变量i的值等于1时 就表示表格的第一行  又因为第一行里面只有一个列 也就意味着内层循环只能循环一次
+      当变量i的值等于2时 就表示表格的第二行  又因为第二行里面只有二个列 也就意味着内层循环只能循环二次
+      当变量i的值等于3时 就表示表格的第三行  又因为第三行里面只有三个列 也就意味着内层循环只能循环三次
+      .....
+      */
+      var str = "<table>";
+
+      for (var i = 1; i <= 9; i++) {
+        str += "<tr>";
+        for (var j = 1; j <= i; j++) {
+          str += `<td>${j}&times;${i}= ${i * j}</td>`;
+        }
+        str += "</tr>";
+      }
+      str += "</table>";
+      document.write(str);
+    </script>
+  </body>
+</html>

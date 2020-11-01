@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       *
+       ***
+       *****
+       *******
+       *********
+
+        第1行有1个星星
+        第2行有3个星星
+        第3行有5个星星
+        第4行有7个星星
+
+        星星的数量与行号之间的关系是什么：2*行号 -1
+
+
+       */
+
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 2 * i - 1; j++) {
+          document.write("*");
+        }
+        document.write('<br>')
+      }
+    </script>
+  </body>
+</html>

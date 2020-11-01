@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // pop() 只能删除数组的最后一个元素
+      // shift() 删除数组的第一个元素
+      // 如果我们想要删除数组中间的元素
+      // splice()
+      // arrayObject.splice(index,howmany,item1,.....,itemX)
+      // 参数1：表示数组的下标
+      // 参数2：表示要删除的个数  如果写0 表示是删除 如果写1就表示删除1个
+      var arr = [19, 2, 33, 64, 17, 1, 28];
+      // 先删除数组指定的元素
+      //   arr.splice(1, 2);
+      //   console.log(arr);
+      // 在指定的位置添加数组数组
+      arr.splice(1, 0, 5, 10, 20);
+      console.log(arr);
+    </script>
+  </body>
+</html>

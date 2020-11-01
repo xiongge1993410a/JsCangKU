@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在函数外面声明的变量称之为全局变量 在整个页面上面都可以使用
+      var v1 = 20;
+
+      function fn() {
+        var v2 = 30;
+        // 在函数体里面想要访问函数外面声明的变量
+        alert(v1);
+      }
+
+      fn();
+
+      // 想要在这里访问fn函数里面定义的变量
+      console.log(v2);
+    </script>
+    
+    <script>
+        document.write(v1)
+    </script>
+  </body>
+</html>

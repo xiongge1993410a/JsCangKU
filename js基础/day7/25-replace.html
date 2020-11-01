@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 把hello替换为你好 
+        var str = 'hello美女,hello帅哥,Hello少年'
+        /*
+            字符串对象.replace(需要替换的字符串,替换为什么)
+            我们发现它只会将字符串的找到的第一个替换了 
+            要求：全都替换  需要定义正则表达式
+            定义： /要替换的内容/g
+            g:global 全局
+            i:ignore
+        */
+        var reg = /hello/gi
+        var res = str.replace(reg,'你好')
+        console.log(res)
+    </script>
+</body>
+</html>

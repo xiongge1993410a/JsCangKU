@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [2, 6, 1, 77, 52, 25, 7];
+      // 第一步：先假设数组的第一个元素是最大值
+      var maxArr = arr[0];
+      // 接下来我们需要拿这个假设的元素与数组的后一项进行比较
+      for (var i = 1; i < arr.length; i++) {
+          // 判断我们假设的这个元素是不是真的是最大的
+          if (maxArr < arr[i]) {
+              // 将那个大的元素赋值给我们假设的这个变量
+              maxArr = arr[i]
+          }
+      }
+      console.log(maxArr)
+    </script>
+  </body>
+</html>

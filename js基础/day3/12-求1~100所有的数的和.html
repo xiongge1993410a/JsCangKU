@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 需要有 1~100之间所有的数字
+      // 2. 我们需要定义一个变量来得到每一次 变量i相加的和
+      var sum = 0;
+      for (var i = 1; i <= 100; i++) {
+        /*
+            当 i = 1  但是有一个问题马上变量的i变成了2了  如何拿到第一次i与第二次的i进行相加呢？
+            我们应该将上次的变量i的值保存起来 任何数 + 0 = 任何数本身 
+            循环的第一次 i = 1   为了保存第一次变量i的值  sum = 0 + 1 = i 
+            循环的第二次 i = 2   我们就可以拿到上一次变量i的值与这一次i的值进行相加以后将其结果保存起来 sum = 1 + 2 
+            循环的第二次 i = 3   我们就可以拿到上一次sum的值 (前两次i相加的和) 加上 这一次变量i的值   sum = sum +　i 
+
+        */
+        // sum = sum + i  sum += i
+        sum += i;
+      }
+
+      document.write(sum);
+    </script>
+  </body>
+</html>

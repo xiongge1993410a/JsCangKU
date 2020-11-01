@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 空对象
+        var p3 = new Object()
+        // 需要给p1这个对象添加属性与方法 
+        p3.name = '李四'
+        p3.age = 18
+        p3.sex = '男'
+        // 在函数里面有一个 this关键字 
+        // this 这个 那个它是根据当前的语言环境来确定它是谁
+        // this它代表当前对象  哪个对象调用这个方法 this关键字就代表谁
+        p3.showInfo = function() {
+            var str = `这个哥们叫${this.name}，他今年${this.age}岁了，他的性别是${this.sex}`
+            console.log(str)
+        }
+
+        p3.showInfo()
+
+    </script>
+</body>
+</html>

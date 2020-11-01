@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 得到随机整数的函数复制过来
+      function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+      }
+
+      var random = getRandom(1, 10);
+      // 先声明一个变量 用于执行while循环 
+      var flag = true
+      while(flag) {
+          var number = prompt('请输入数字')
+          if(random > number) {
+              alert("猜小了")
+          }else if( random < number) {
+              alert('猜大了')
+          }else {
+              alert('猜对了')
+              // 将循环进行中止 
+              flag = false
+          }
+      }
+    </script>
+  </body>
+</html>

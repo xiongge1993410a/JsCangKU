@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 如果函数的实参个数不确定的情况下，那么我们在定义函数时 就不要形参了
+
+      function getSum() {
+        var sum = 0;
+
+        for(var i = 0;i<arguments.length;i++) {
+            sum += arguments[i]
+        }
+        console.log(sum)
+      }
+
+      getSum(10, 20);
+      getSum(10, 20, 30);
+    //   getSum(10, 20, 30, 40);
+    //   getSum(10, 20, 30, 40, 50);
+    </script>
+  </body>
+</html>

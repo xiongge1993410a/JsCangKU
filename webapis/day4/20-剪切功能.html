@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #000;
+        overflow: hidden;
+      }
+      li {
+        height: 40px;
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>美国新冠死亡病例超过20万 欧洲理事会主席决定自我隔离</li>
+      <li>又一例！从广东结束隔离后返四川被确诊为无症状感染者</li>
+      <li>时隔三日 韩国单日新增新冠确诊数再次回升至百例</li>
+      <li>欧洲疫情反弹加剧 多国加强区域管控</li>
+    </ul>
+
+    <script>
+      var btn = document.querySelector("#btn");
+      var ul = document.querySelector("ul");
+
+      setInterval(function () {
+        var liFirst = ul.children[0];
+        ul.appendChild(liFirst);
+      }, 1000);
+    </script>
+  </body>
+</html>

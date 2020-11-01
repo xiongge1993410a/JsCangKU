@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="search" />
+    <script>
+      // 在页面上按下了 s 键 就按输入框获取 焦点  focus()
+      var search = document.querySelector("#search");
+      document.addEventListener("keyup", function (e) {
+        var e = e || window.event;
+        var keycode = e.keyCode;
+        // 如果keycode的值为83 说明用户按下了s键
+        if (keycode === 83) search.focus();
+      });
+    </script>
+  </body>
+</html>

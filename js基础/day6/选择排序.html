@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 先假设数组的第一个元素是最小的 确定我假设的这个元素是不是真的是最小的 ，如果不是的 就将最小的那个元素的下标找出来  ，找到了最小元素的下标 则将数组的第一个元素 与 找到的这个最小的元素进行交换位置
+
+      var arr = [10, 3, 7, 24, 6, 81, 5];
+      for (var i = 0; i < arr.length - 1; i++) {
+        // 我们之前保存的第一个元素 现在保存的第一个元素的下标
+        // 第一轮时 i = 0 我们这里应该假设数组的第一个元素最小
+        // 第二轮时 i = 1 我们这里应该假设数组的第二个元素最小
+        // 第三轮时 i = 2 我们这里应该假设数组的第三个元素最小
+        var min = i;
+        // 需要拿假设的这个元素与数组的后面的元素进行比较 arr
+        for (var j = 1 + i; j < arr.length; j++) {
+          // 如果我们假设的这个元素比数组后面的元素还要大 说明假设不成立
+          if (arr[min] > arr[j]) {
+            min = j;
+          }
+        }
+        // 将数组的第一个元素 与 找到的这个最小的元素交换位置
+        var temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
+      }
+
+      console.log(arr);
+    </script>
+  </body>
+</html>

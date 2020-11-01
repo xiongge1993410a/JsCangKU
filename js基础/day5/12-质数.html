@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+          什么是质数：能够被1和自身整除的数字称之为质数 
+          反过来说 如果一个数字能够被 除了 1和自身之间的任何一个数字整除 那就说明它不是质数 
+          为什么说数字 8 不是质数  它除了能够被1 和 8整除 还可以被  2 和 4 整除 
+          比如给个数字给8   我就将 2 3 4 5 6 7 取出来  拿数字 8 % 2 是否等于0  
+          写一个函数判断一个数字是不是质数，如果是质数就返回true ,如果不是质数就返回false
+
+          比如为什么7是质数   2 3 4 5 6 
+          9   2 3 4 5 6 7 8   
+        */
+      function isZhiShi(num) {
+        for (var i = 2; i < num; i++) {
+          // 如果 i变量能够被 num整除 那就说明它不是质数
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      for (var j = 2; j <= 1000; j++) {
+        // 在这里来调用函数 得到的函数的返回值
+        var flag = isZhiShi(j);
+        if (flag === true) {
+          document.write(j + "：是质数<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

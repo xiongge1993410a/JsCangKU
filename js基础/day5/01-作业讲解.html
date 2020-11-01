@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function getMax(num1, num2, num3) {
+      //     // 先拿两个变量的值进行比较 得到一个最大值  然后再拿这个最大值与第三个变量进行比较
+      //     var res;
+      //     if (num1 > num2) {
+      //       res = num1;
+      //     } else {
+      //       res = num2;
+      //     }
+      //     var max;
+      //     // 需要拿res这个变量与第三个变量进行比较
+      //     if (res > num3) {
+      //       max = res;
+      //     } else {
+      //       max = num3;
+      //     }
+      //     console.log(max)
+      //   }
+
+      function getMax(num1, num2, num3) {
+        // 先拿两个变量的值进行比较 得到一个最大值  然后再拿这个最大值与第三个变量进行比较
+        var max = num1 > num2 ? (num1 > num3 ? num1 : num3) : num2 > num3 ? num2 : num3;
+        // var max = res > num3 ? res : num3;
+        console.log(max);
+      }
+
+      getMax(40, 50, 30);
+    </script>
+  </body>
+</html>

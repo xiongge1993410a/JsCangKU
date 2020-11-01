@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div title="阿念"></div>
+    <button id="btn">添加属性</button>
+    <button id="delAttr">删除属性</button>
+    <script src="../day1/js/public.js"></script>
+    <script>
+      var btn = $("#btn");
+      var div = $("div");
+      var delAttr = $("#delAttr");
+      btn.onclick = function () {
+        div.setAttribute("index", "阿伟");
+      };
+
+      delAttr.onclick = function () {
+        div.removeAttribute("title");
+      };
+    </script>
+  </body>
+</html>

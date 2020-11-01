@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    手机号码： <input type="number" /> <button>发送验证码</button>
+    <script>
+      // 1.获取按钮 注册点击事件
+      var btn = document.querySelector("button");
+      var time = 10;
+      btn.addEventListener("click", function () {
+        // 让按钮设置为禁用状态
+        btn.disabled = true;
+        // 定时器是属于 window对象的方法 所以它里面的this表示的是window对象
+        var timerId = setInterval(function () {
+          if (time === 0) {
+            // 将按钮禁用的效果设置为可以点击的状态
+            btn.disabled = false;
+            // 重置里面的文字
+            btn.innerHTML = "发送验证码";
+            // 重置时间
+            time = 10;
+            // 清除定时器
+            clearInterval(timerId);
+          } else {
+            // 让时间进行减1
+            time--;
+            // 往标签里面写入内容
+            btn.innerHTML = `还剩下${time}秒`;
+          }
+          //   console.log(time);
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

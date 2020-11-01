@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 把一个函数作为参数传递给另外一个函数 那么这个函数就称之为回调函数
+      var fn = function() {
+          console.log('ok');
+      }
+
+    //   fn();
+    function f(callback) {
+        callback();
+    }
+
+    f(fn);
+    </script>
+  </body>
+</html>

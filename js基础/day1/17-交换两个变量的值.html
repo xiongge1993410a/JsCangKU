@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 交换两个变量的值 第一步需要先初始化两个变量
+        var num1 = 10;
+        var num2 = 20;
+
+        // 第一步：先声明一个临时变量 
+        var temp;
+        // 第二步：将num2的变量的值赋值给临时变量
+        temp = num2
+        // 第三步：将num1的变量的值赋值给num2
+        num2 = num1;
+        // 第四步：将临时变量的值赋值给 num1 
+        num1 = temp;
+
+        console.log(num1);
+        console.log(num2);
+    </script>
+</body>
+</html>

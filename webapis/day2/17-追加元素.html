@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>第1个li</li>
+      <li>第2个li</li>
+      <li>第3个li</li>
+      <li>第4个li</li>
+    </ul>
+    <button id="btn">创建</button>
+    <script>
+      var btn = document.querySelector("#btn");
+      var ul = document.querySelector("ul");
+      btn.onclick = function () {
+        // 创建 li 标签
+        var liNode = document.createElement("li");
+        liNode.innerHTML = "我是创建的li标签";
+
+        var liLast = ul.children[ul.children.length - 1];
+        // 父对象.insertBefore(要追加的元素,追加到谁的前面)
+        ul.insertBefore(liNode, liLast);
+      };
+    </script>
+  </body>
+</html>

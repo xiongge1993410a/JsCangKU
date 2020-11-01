@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var 变量名 = {
+            key:value,
+            key:value,
+            key:value,
+            key:value,
+            key:value
+        }
+        
+        */
+
+        var obj = {
+            uname: '可可',
+            type: '阿拉斯加',
+            age: 5,
+            color: '棕红色',
+            bark: function() {
+                console.log('汪汪汪')
+            },
+            showFilm: function() {
+                console.log('后会无期')
+            }
+        }
+
+        // 如何访问对象里面的属性 格式：对象名.属性名 或者 对象名['属性名']
+        console.log(obj.uname)
+        console.log(obj['uname'] + '是wsc的狗')
+
+        // 访问方法 对象.方法()
+
+        obj.bark();
+
+
+    </script>
+</body>
+</html>

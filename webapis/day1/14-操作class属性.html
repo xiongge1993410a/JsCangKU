@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      /* 类名 */
+      .box {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script>
+        var div = document.querySelector('#box');
+        // 2.鼠标经过的时候 onmouseover
+        div.onmouseover = function () {
+            this.className = 'box'
+        }
+    </script>
+  </body>
+</html>

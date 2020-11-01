@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 定义一个数组 
+      var arr = ['星期天','星期一','星期二','星期三','星期四','星期五','星期六']
+
+      // 肯定需要获取系统的时间
+      // 创建一个时间日期对象
+      var myDate = new Date();
+      // 从这个对象中 获取今天星期几
+      var week = myDate.getDay(); // 它给我们有哪些？ 0 ~ 6 0表示星期天  1表示星期1  6表示星期天 就可以把这个数字当作为arr这个数组的索引 
+      console.log(arr[week])
+    </script>
+  </body>
+</html>

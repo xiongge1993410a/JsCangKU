@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [10, 3, 7, 24, 6, 81, 5];
+
+      for (var i = 0; i < arr.length - 1; i++) {
+        /*
+        第一轮的时候 7个数字比较了6次 就可以将最大的那个数字放在数组的最后面了  i = 0 比较6次
+        第二轮的时候 6个数字比较了5次 就可以将最大的那个数字放在数组的后面了    i = 1 比较5次
+        第三轮的时候 5个数字比较了4次 就可以将最大的那个数字放在数组的后面了    i = 2 比较4次
+        第四轮的时候 4个数字比较了3次 就可以将最大的那个数字放在数组的后面了
+        第五轮的时候 3个数字比较了2次 就可以将最大的那个数字放在数组的后面了
+        第六轮的时候 2个数字比较了1次 就可以将最大的那个数字放在数组的后面了        
+        */
+        for (var j = 0; j < arr.length - i - 1; j++) {
+          // 判断如果前一个数字比后一个数字要大的话 则交换它们两个的位置
+          if (arr[j] > arr[j + 1]) {
+            var temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+
+      console.log(arr);
+    </script>
+  </body>
+</html>

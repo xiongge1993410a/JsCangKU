@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 400px;
+        border-bottom: 1px solid #ccc;
+        margin: 100px auto;
+      }
+
+      .box input {
+        width: 370px;
+        height: 30px;
+        border: 0;
+        outline: none;
+      }
+
+      .box img {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <label for="">
+        <img src="images/close.png" alt="" id="eye" />
+      </label>
+      <input type="password" name="" id="pwd" />
+    </div>
+    <script>
+      // 1. 获取元素
+      var eye = document.getElementById("eye");
+      var pwd = document.getElementById("pwd");
+      // 先设置一个变量 表示 它是关闭的
+      var flag = 0; // 0就表示关闭
+      // 2 给图片注册点击事件
+      eye.onclick = function () {
+        // 如果是关闭的  就应该将输入框 设置文本框 同时将眼睛打开
+        // 如果是打开的  就应该将输入框 设置密码框 同时将眼睛关闭
+        if (flag === 0) {
+          eye.src = "images/open.png";
+          pwd.type = "text";
+          flag = 1;
+        } else {
+          // 表示是打开的
+          eye.src = "images/close.png";
+          pwd.type = "password";
+          flag = 0;
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      input {
+        color: #999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="text" value="手机" />
+    <script>
+      // 1.获取元素
+      var input = document.querySelector("input");
+      // 2 给其注册获取焦点
+      input.onfocus = function () {
+        // 判断输入里面的内容是 手机
+        if (this.value === "手机") {
+          this.value = "";
+        }
+        this.style.color = '#333'
+      };
+      // 3.当失去焦点时 如果里面没有内容 就显示手机
+      input.onblur = function() {
+          // 有一个字符串对象的方法 trim() 用于去除字符串左右两边的空格
+          // 当失去焦点时输入框里面没有内容 就将value设置为 手机
+          if(this.value.trim().length === 0) {
+              this.value = '手机'
+          }
+          this.style.color = '#999'
+      }
+    </script>
+  </body>
+</html>

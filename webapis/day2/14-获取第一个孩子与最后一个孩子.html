@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>第1个li</li>
+      <li>第2个li</li>
+      <li>第3个li</li>
+      <li>第4个li</li>
+    </ul>
+    <script>
+      // 获取ul标签
+      var ul = document.querySelector("ul");
+      // 获取ul里面的第一个子元素
+      //   var firstChild = ul.firstChild;
+      //   var last = ul.lastChild;
+      var first = ul.firstElementChild;
+      console.log(first.innerHTML);
+      var last = ul.lastElementChild;
+      console.log(last.innerHTML);
+    </script>
+  </body>
+</html>

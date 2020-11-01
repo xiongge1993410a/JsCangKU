@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>网页标题</title>
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<style type="text/css"></style>
+	
+</head>
+<body>
+	<table border='1' width='400' align='center' style='border-collapse:collapse;' id="table">
+		<tr>
+			<th>序号</th>
+			<th>标题</th>
+			<th>发布时间</th>
+			<th>删除</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>武汉传智PHP要开班了</td>
+			<td>2016-3-20</td>
+			<td><input type='checkbox' name='id'/></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>佛山传智PHP要开班了</td>
+			<td>2018-3-20</td>
+			<td><input type='checkbox' name='id'/></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>纽约传智PHP要开班了</td>
+			<td>2018-3-20</td>
+			<td><input type='checkbox' name='id'/></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>伦敦传智PHP要开班了</td>
+			<td>2018-3-20</td>
+			<td><input type='checkbox' name='id'/></td>
+		</tr>
+		<tr>
+			<td colspan='4' align='right'>
+			<input type='button' value='全选' id='quanxuan' />
+			<input type='button' value='取消' id='quxiao' />
+			<input type='button' value='反选' id='fanxuan' />
+			<input type='button' value='删除' id='del' />
+			</td>
+		</tr>
+	</table>
+    <script type="text/javascript">
+		window.onload = function(){
+			//获取id= quanxuan 对象
+			var quanxuan_obj = document.getElementById('quanxuan');
+			//获取id= fanxuan 对象
+			var fanxuan_obj = document.getElementById('fanxuan');
+			//获取id= quxiao 对象
+			var quxiao_obj = document.getElementById('quxiao');
+			var del_obj = document.getElementById('del');
+			var input_obj = document.getElementsByName('id');
+			var input_obj_length = input_obj.length;
+				//全选
+			quanxuan_obj.onclick = function(){
+				//遍历
+				for(var i=0;i<input_obj_length;i++){
+					input_obj[i].checked = true;
+				}
+			}
+			//取消
+			quxiao_obj.onclick = function(){
+				for(var i=0;i<input_obj_length;i++){
+					input_obj[i].checked = false;
+				}
+			}
+			//反选
+			fanxuan_obj.onclick = function(){
+				for(var i=0;i<input_obj_length;i++){
+					if(input_obj[i].checked){
+						input_obj[i].checked = false;
+					}else{
+						input_obj[i].checked = true;
+					}
+				}
+			}
+            
+
+            del_obj.onclick = function(){
+                var array = new Array();
+                for(var i = 0; i<input_obj.length ;i++){
+                    if(input_obj[i].checked){
+                        array.push(input_obj[i]);
+                    }
+                }
+
+                for(var i = 0; i< array.length ;i++){
+                    document.getElementById("table").children[0].removeChild(array[i].parentNode.parentNode);
+                }
+            }
+
+
+		}
+	</script>
+</body>
+</html>

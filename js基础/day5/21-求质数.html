@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+         质数：只能被1和自身整除的数字 就是质数
+         比如：2  3  5  7  11  13  17 19  23 
+         如果判断一个数字是不是质数：
+         反向推理：如果一个数字它不仅仅能够被 1 和自身整除  只要它能够被 2 到自己减1 之间的任何一个数字整除那就说明这个数字不是质数 
+         如果这个数字 不能被  2 到自己减1中间的任何一个数字整除 那么它就是质数
+         2 3 4 5 6 7 
+        */
+
+      function isZhiShu(num) {
+        var flag = true; // 假设这个数字是质数
+        for (var i = 2; i < num; i++) {
+          // 如果 i能够被 num整除那就说明这个数字不是质数了
+          if (num % i === 0) {
+            flag = false;
+            break
+          }
+        }
+        return flag;
+      }
+
+      for (var j = 2; j <= 100; j++) {
+       var res = isZhiShu(j) // 调用函数得到函数的返回值 将返回值赋值给变量res
+       if(res) {
+           console.log(j + '是质数')
+       }
+      }
+    </script>
+  </body>
+</html>

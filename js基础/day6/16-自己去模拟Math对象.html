@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 使用字面量的方式创建对象
+      var myMath = {
+        PI: 3.1415926,
+        // 求最大值
+        max: function () {
+          // 如果没有传递参数  就返回 - Infinity
+          if (arguments.length === 0) {
+            return -Infinity;
+          }
+          // 如果传递了参数  先假设数组的第一个元素是最大的
+          var index = arguments[0];
+          for (var i = 1; i < arguments.length; i++) {
+            if (index < arguments[i]) {
+              index = arguments[i];
+            }
+          }
+          return index;
+        },
+        min: function () {
+          // 假设数组里面的第一个元素最小
+          var index = arguments[0];
+          for (var i = 1; i < arguments.length; i++) {
+            if (index > arguments[i]) {
+              index = arguments[i];
+            }
+          }
+          return index;
+        }
+      };
+
+      var res = myMath.max(10, 20, 30, 40);
+      console.log(res);
+
+      var res = myMath.min(10, 20, 30, 40);
+      console.log(res);
+    </script>
+  </body>
+</html>

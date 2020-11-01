@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" style="display: block;"></div>
+    <script>
+        // 1获取元素
+        var div = document.querySelector('#box');
+        // 2.注册鼠标经过  onmouseover
+        div.onmouseover = function() {
+            // 设置行内样式 对象.style.css属性值 
+            // console.log(this.style.display)
+            this.style.backgroundColor = 'pink'
+        }
+
+         // 3.注册鼠标离开  onmouseout
+        div.onmouseout  = function() {
+            this.style.borderRadius = '50%';
+            this.style.backgroundColor = '#f00'
+        }
+    </script>
+  </body>
+</html>

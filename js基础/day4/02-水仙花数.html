@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 它们的个位数的3次方加上十位数的3次方加上百位数的3次方刚才等于这个数字 这样的数字就称之为水仙花数
+
+      // 需要将一个数的 个位数 十位数 百位数 求出来
+      for (var i = 100; i <= 999; i++) {
+        // 个位数
+        var g = i % 10;
+        // 十位数
+        var s = parseInt((i % 100) / 10);
+        // 百位数
+        var b = parseInt(i / 100);
+
+        if (i === g * g * g + s * s * s + b * b * b) {
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>

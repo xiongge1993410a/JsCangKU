@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding: 100px;
+      }
+
+      textarea {
+        width: 200px;
+        height: 100px;
+        border: 1px solid pink;
+        outline: none;
+        resize: none;
+      }
+
+      ul {
+        margin-top: 50px;
+      }
+
+      li {
+        width: 300px;
+        padding: 5px;
+        background-color: rgb(245, 209, 243);
+        color: red;
+        font-size: 14px;
+        margin: 15px 0;
+      }
+
+      li a {
+        float: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+      // 1.获取元素
+      var text = document.querySelector("textarea");
+      var button = document.querySelector("button");
+      var ul = document.querySelector("ul");
+      // 2.给button标签对象添加onclick事件
+      button.onclick = function () {
+        var textValue = text.value;
+        // 判断输入框有没有内容 如果没有内容 就提示用户 并且代码不需要往下执行了
+        if (textValue.trim().length === 0) return alert("请重新输入");
+        // 表示用户填写了内容 创建一个li标签
+        var li = document.createElement("li");
+        li.innerHTML = `${textValue} <a href="javascript:;" onclick="delLi(this)">删除</a>`;
+        ul.appendChild(li);
+        // 内容填写完了 将输入框清空
+        text.value = "";
+      };
+
+      // 声明一个函数用于删除 li
+      function delLi(obj) {
+        obj.parentNode.remove();
+      }
+    </script>
+  </body>
+</html>

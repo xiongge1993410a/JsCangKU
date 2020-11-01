@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 600px;
+        border: 1px solid #000;
+        /* 合并表格的边框线 */
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 第一步：我们需要先对行进行循环
+      var str = "<table>";
+      // 这个循环是在对 表格的 行进行循环  外面的循环循环了一次 里面的循环9次
+      // 当代码执行到下一行时 定义一个变量i = 1  1 <=9 条件语句成文就执行循环体
+      // 外层循环在控制 表格的 行  内层循环在控制表格的列
+      for (var i = 1; i <= 9; i++) {
+        str += "<tr>";
+        // 列也需要循环9次 把列表当作为循环体
+        // 定义一个变量 j = 1 1 <= 9 就执行循环体
+        for (var j = 1; j <= 9; j++) {
+          str += "<td>&nbsp;</td>";
+        }
+        str += "</tr>";
+      }
+      str += "</table>";
+      document.write(str);
+    </script>
+  </body>
+</html>

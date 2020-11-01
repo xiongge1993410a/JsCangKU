@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .wrap {
+        width: 300px;
+        margin: 100px auto 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #c0c0c0;
+        width: 300px;
+      }
+
+      th,
+      td {
+        border: 1px solid #d0d0d0;
+        color: #404060;
+        padding: 10px;
+      }
+
+      th {
+        background-color: #09c;
+        font: bold 16px "微软雅黑";
+        color: #fff;
+      }
+
+      td {
+        font: 14px "微软雅黑";
+      }
+
+      tbody tr {
+        background-color: #f0f0f0;
+      }
+
+      tbody tr:hover {
+        cursor: pointer;
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" id="j_cbAll" />
+            </th>
+            <th>商品</th>
+            <th>价钱</th>
+          </tr>
+        </thead>
+        <tbody id="j_tb">
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>iPhone8</td>
+            <td>8000</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>iPad Pro</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>iPad Air</td>
+            <td>2000</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>Apple Watch</td>
+            <td>2000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="../day1/js/public.js"></script>
+    <script>
+      /*
+     下面4个复选框的状态是由 上面复选框的状态来决定  
+      1.上面的复选框如果已经打上勾了，那么下面的4个复选框也要跟着打上勾
+      2.如果下面的4个复选框都打上勾了那么 上面的复选框也要跟着打上勾
+*/
+      // 1.需要分别获取上面的复选框 以及同时获取下面的4个复选框
+      var checkAll = $("#j_cbAll");
+      var check = $$("#j_tb input");
+      // 2.我们需要先给上面的复选框对象注册点击事件  checkAll
+      checkAll.onclick = function () {
+        // 如何知道这个元素是否选打勾了 通过checked来获取 如果属性的值为 true就表示这个元素已经打上勾 如果为false就表示这个元素没有打勾
+        // 遍历下面的复选框
+        for (var i = 0; i < check.length; i++) {
+          check[i].checked = this.checked;
+        }
+      };
+
+      // 分别给下面的4个复选框 注册 click事件
+      // 先遍历才能注册
+      for (var i = 0; i < check.length; i++) {
+        check[i].onclick = function () {
+          // 我们需要写一个选择器来获取下面复选框 选中元素的个数
+          var checkedLength = document.querySelectorAll("tbody input:checked").length;
+
+          if (checkedLength === check.length) {
+            // 将上面的那个复选框选中
+            checkAll.checked = true;
+          } else {
+            // 将上面的那个复选框不选中
+            checkAll.checked = false;
+          }
+
+          // checkAll.checked = (checkedLength === check.length)
+        };
+      }
+    </script>
+  </body>
+</html>

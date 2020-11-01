@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 构造函数 专用于生产对象的 讲对象主要为了 JS基础的第6天 因为我们要使用JS内置对象
+      function CreateObject(n, a, s) {
+        // this.属性名
+        this.name = n;
+        this.age = a;
+        this.sex = s;
+      }
+      // 构造函数一定是通过 new 构造函数名() 实例化对象
+      var ldh = new CreateObject("刘德华", 56, "男");
+      console.log(ldh);
+
+      var zxy = new CreateObject("张学友", 56, "男");
+      console.log(zxy);
+      
+    </script>
+  </body>
+</html>

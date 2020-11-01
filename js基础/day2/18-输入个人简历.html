@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>打印张三疯的个人信息</h2>
+    <ul>
+        <li>姓名：张三疯</li>
+        <li>性别：男</li>
+        <li>年龄：18</li>
+        <li>爱好：打太极</li>
+    </ul> -->
+    <script>
+        // html结构所需要所数据
+        var uname = '张三疯'
+        var sex = '男'
+        var age = 18
+        var hobby = '打太极'
+        // 需要在浏览器上面输出 html的结构
+        // 需要定义一个变量来保存html标签 把html标签当作为 字符串来使用 
+        var str = `<h2>打印${uname}的个人信息</h2>`
+            str += '<ul>' // str = str + '<ul>'
+            str += `<li>姓名：${uname}</li>`
+            str += `<li>性别：${sex}</li>`
+            str += `<li>年龄：${age}</li>`
+            str += `<li>爱好：${hobby}</li>`
+            str += '</ul>'
+
+        document.write(str)
+        // console.log(str)
+    </script>
+</body>
+</html>

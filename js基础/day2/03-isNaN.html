@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // isNaN 判断一个变量的值 如果它是NaN 就会得到 true ,如果变量的值是数字就会得到 false 
+        var str = 'abcd'
+        // isNaN 这个工具它有一个隐式转换的功能 isNaN需要的变量类型是 number类型 但是我给了一个 字符串 isNaN这个工具就会将变量的类型先转换为 number 然后再来进行判断 
+        console.log(isNaN(str))
+    </script>
+</body>
+</html>

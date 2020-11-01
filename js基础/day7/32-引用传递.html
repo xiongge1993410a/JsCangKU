@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 引用传递 将一个变量的值(内存地址)赋值给了另外一个变量，如果修改其中某一个变量的值 另外一个变量的值也会跟着发生改变
+      function fn(a) {
+        a[0] = "卡卡罗特";
+        console.log(a);
+      }
+
+      var arr = ["孙悟空", 500, "七十二变"];
+      fn(arr);
+
+      console.log(arr);
+    </script>
+  </body>
+</html>

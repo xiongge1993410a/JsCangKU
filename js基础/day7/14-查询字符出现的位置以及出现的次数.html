@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 找字符o出现的位置  indexOf('o')
+      var str = "oabcoefoxyozzopp";
+      var index = str.indexOf("o");
+      //   console.log(index);
+      //   var index = str.indexOf("o", index + 1);
+      //   console.log(index);
+      //   var index = str.indexOf("o", index + 1);
+      //   console.log(index);
+      //   var index = str.indexOf("o", index + 1);
+      //   console.log(index);
+      //   var index = str.indexOf("o", index + 1);
+      //   console.log(index);
+      //   var index = str.indexOf("o", index + 1);
+      //   console.log(index);
+      // 只要找到的o 我们就需要循环 什么叫找到的o 返回的索引不为-1
+      var count = 0; // 用于计数
+      while (index !== -1) {
+        console.log(index);
+        index = str.indexOf("o", index + 1);
+        count++;
+      }
+      console.log(count);
+    </script>
+  </body>
+</html>

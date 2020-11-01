@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        age: 0
+      };
+
+      // obj['age'] 访问对象属性的值    对象.hasOwnProperty(属性名)  如果有就是返回true 如果没有就返回false
+      //   if (obj["age"]) {
+      //     console.log("有age这个属性");
+      //   } else {
+      //     console.log("没有age这个属性");
+      //   }
+
+      console.log(obj.hasOwnProperty("age"));
+      if (obj.hasOwnProperty("number")) {
+        console.log("有age这个属性");
+      } else {
+        console.log("没有age这个属性");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox"><br>
+    <button>选中</button>
+    <script src="js/public.js"></script>
+    <script>
+        // 获取input与button元素
+        var input = $('input');
+        var button = $('button');
+        // 2.给button元素添加点击事件
+        button.onclick = function() {
+            input.checked = true
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name:'张三',
+            age:18,
+            sex: '男'
+        }
+        // 访问对象的属性 对象名.属性名 或者  对象名['属性名']
+        // 给对象添加属性 对象名.属性名 = 值  或者  对象名['属性名']=值 
+        // 如果是遍历对象  我们不能使用 对象名.属性名 方式来访问对象的属性 只能用 对象名['属性名']
+        for(var key in obj) {
+            console.log(obj[key])
+            // console.log(对象名.属性名)
+            // console.log(obj.key);
+        }
+    </script>
+</body>
+</html>

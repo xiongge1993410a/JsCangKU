@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        margin: 200px;
+      }
+
+      span {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <span class="hour">1</span>
+      <span class="minute">2</span>
+      <span class="second">3</span>
+    </div>
+    <script>
+      // 1. 获取元素
+      var hour = document.querySelector(".hour"); // 小时的黑色盒子
+      var minute = document.querySelector(".minute"); // 分钟的黑色盒子
+      var second = document.querySelector(".second"); // 秒数的黑色盒子
+
+      function countDown(inputTime) {
+        // 得到当前的时间的时间戳
+        var now = new Date();
+        var nowTime = now.getTime();
+        // 获取到未来的时间戳
+        var fDate = new Date(inputTime);
+        var fTime = fDate.getTime();
+        // 用未来的时间戳 减去 现在的时间戳
+        var time = (fTime - nowTime) / 1000; // 将毫秒转换为秒
+        var h = parseInt(time / 60 / 60 % 24).toString().padStart(2, '0');
+        var m = parseInt(time / 60 % 60).toString().padStart(2, '0');
+        var s = parseInt(time % 60).toString().padStart(2, '0');
+
+        hour.innerHTML = h
+        minute.innerHTML = m
+        second.innerHTML = s
+      }
+
+      countDown('2020-9-28 18:00:00');
+
+      setInterval("countDown('2020-9-28 18:00:00')",1000)
+    </script>
+  </body>
+</html>

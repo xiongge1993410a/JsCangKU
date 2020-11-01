@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = "javascript";
+      var index = str.indexOf("script");
+      // 截取字符串  substring(开始下标,[结束的下标])
+      // 第一个参数：表示需要截取的下标
+      // 第二个参数：可选 如果不写 就表示截取到字符串末尾 如果写了 就表示截取的结束的下标
+      // var res = str.substring(index)
+      // console.log(res)
+      //   var res = str.substring(index, index + 3);
+      //   console.log(res);
+      var res = str.slice(index, index + 3);
+      console.log(res);
+    </script>
+  </body>
+</html>

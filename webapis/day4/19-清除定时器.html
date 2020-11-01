@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        var timer = setInterval(function(){
+            console.log('ok')
+        },1000)
+
+        document.querySelector('#btn').onclick = function() {
+            // 清除指定的定时器
+            clearInterval(timer);
+        }
+    </script>
+</body>
+</html>

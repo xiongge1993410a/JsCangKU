@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 我们先声明了一个全局变量
+        var v1;
+        function fn() {
+            // 给全局变量赋值 
+            v1 = 10
+        }
+
+        fn()
+        // 想要在函数外面访问函数里面声明的变量？
+        console.log(v1)
+    </script>
+</body>
+</html>

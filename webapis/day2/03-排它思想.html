@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script src="../day1/js/public.js"></script>
+    <script>
+      // 1.获取到所有的button按钮
+      var btns = $$("button");
+      // 2.给每一个btn绑定 onclick 事件
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+          // 先要将所有的btns身上的背景颜色去掉
+          for (var j = 0; j < btns.length; j++) {
+            btns[j].style.backgroundColor = "";
+          }
+          // 给当前被点击这个元素设置背景颜色
+          this.style.backgroundColor = "pink";
+        };
+      }
+    </script>
+  </body>
+</html>

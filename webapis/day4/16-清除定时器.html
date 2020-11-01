@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <hr>
+    <button id="btn">清除定时器</button>
+    <script>
+      var div = document.querySelector("div");
+
+      // 定时器
+      var timerId = setTimeout(function () {
+        div.style.display = "none";
+      }, 5000);
+
+      // 点击按钮时就将关闭div的这个定时器清除
+      var btn = document.querySelector("#btn");
+      btn.onclick = function () {
+        // clearTimeout(要清除的定时器);
+        clearTimeout(timerId);
+      };
+    </script>
+  </body>
+</html>

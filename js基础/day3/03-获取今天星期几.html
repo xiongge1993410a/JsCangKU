@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 第一步：得到一个时间日期对象
+        var myDate = new Date()
+        // 第二步：通过时间日期对象得到今天星期几 
+        var week = myDate.getDay()
+        console.log(week)
+        // console.log(week)
+        if (week === 1) {
+            console.log('打羽毛球')
+        } else if (week === 2) {
+            console.log('打篮球')
+        } else if (week === 3) {
+            console.log('打乒乓球')
+        } else if (week === 4) {
+            console.log('打台球')
+        } else if (week === 5) {
+            console.log('打麻将')
+        } else {
+            console.log('写代码')
+        }
+
+
+    </script>
+</body>
+</html>

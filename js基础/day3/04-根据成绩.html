@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        根据考试的成绩来判断是否是优秀、中等、良好、及格、渣渣
+
+        如果考试的分数的大于等于90 打印优秀
+
+        如果考试的分数的大于等于80 并且 小于90 打印中等
+
+        如果考试的分数的大于等于70 并且小于 80 打印良好
+
+        如果考试的分数的大于等于60 并且小于 70 打印及格
+
+        否则就是打印渣渣辉
+        需要有一个输入框 让用户输入分数
+        限定用户输入的成绩 必须在 0~100之间 
+
+        比如我们去高铁站坐高铁 
+        检票：看看你是否买了高铁票 如果有 才放你进去 
+
+        */
+      var score = prompt("请输入分数");
+
+      if (score >= 0 && score <= 100) {
+        if (score >= 90) {
+          document.write("优秀");
+        } else if (score >= 80 ) {
+          document.write("中等");
+        } else if (score >= 70 ) {
+          document.write("良好");
+        } else if (score >= 60 ) {
+          document.write("及格");
+        } else {
+          document.write("渣渣，问题不大，还需要努力");
+        }
+      } else {
+        alert("请输入合法的分数");
+      }
+    </script>
+  </body>
+</html>

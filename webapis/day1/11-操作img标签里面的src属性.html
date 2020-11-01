@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="imgs/1.jpg" alt="" />
+    <button>更改src属性的值</button>
+    <script src="js/public.js"></script>
+    <script>
+      //1.需要给button添加点击事件
+      var btn = $("button");
+      btn.onclick = function () {
+        // 当鼠标点击这个按钮时 修改img标签里面的src属性的值
+        var img = $("img");
+        // 设置src属性与width属性
+        img.src = "imgs/2.jpg";
+        img.width = 200;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Math.random() 返回0~1之间的一个随机数  [0,1)
+
+    //   console.log(Math.random());
+      // 返回一个包含最小会同时包含最大值的随机数
+      function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值
+      }
+
+      console.log(getRandom(10,20))
+    </script>
+  </body>
+</html>
